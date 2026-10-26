@@ -1,0 +1,49 @@
+[
+ {
+  "id": "veneto-emilia",
+  "title": "Veneto ed Emilia-Romagna",
+  "bbox": [
+   9.1791,
+   43.712,
+   13.1211,
+   46.6998
+  ],
+  "chunk": 4194304,
+  "mb": 474,
+  "date": "2026-10-26",
+  "parts": [
+   {
+    "key": "base",
+    "file": "base.pmtiles",
+    "size": 266251193,
+    "n": 64
+   },
+   {
+    "key": "dem",
+    "file": "dem.pmtiles",
+    "size": 49955830,
+    "n": 12
+   },
+   {
+    "key": "contours",
+    "file": "curve.pmtiles",
+    "size": 91560135,
+    "n": 22
+   },
+   {
+    "key": "offroad",
+    "file": "offroad.pmtiles",
+    "size": 61984915,
+    "n": 15
+   },
+   {
+    "key": "poi",
+    "file": "poi.json",
+    "size": 4473251,
+    "n": 1
+   }
+  ],
+  "bundle": "grizzly-mappa-veneto-emilia.grizzly",
+  "base_url": "https://github.com/manuelperina-maker/grizzly-mappe/releases/download/zona-veneto-emilia/"
+ }
+]
