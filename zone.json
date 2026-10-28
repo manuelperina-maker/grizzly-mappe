@@ -1,5 +1,64 @@
 [
  {
+  "id": "trentino",
+  "title": "Trentino-Alto Adige",
+  "bbox": [
+   10.3658,
+   45.6531,
+   12.4977,
+   47.1115
+  ],
+  "chunk": 4194304,
+  "mb": 244,
+  "date": "2026-10-28",
+  "parts": [
+   {
+    "key": "base",
+    "file": "base.pmtiles",
+    "size": 88148755,
+    "n": 22
+   },
+   {
+    "key": "dem",
+    "file": "dem.pmtiles",
+    "size": 24112450,
+    "n": 6
+   },
+   {
+    "key": "contours",
+    "file": "curve.pmtiles",
+    "size": 85350862,
+    "n": 21
+   },
+   {
+    "key": "offroad",
+    "file": "offroad.pmtiles",
+    "size": 44110693,
+    "n": 11
+   },
+   {
+    "key": "poi",
+    "file": "poi.json",
+    "size": 2118827,
+    "n": 1
+   }
+  ],
+  "bundle": "grizzly-mappa-trentino.grizzly",
+  "base_url": "https://github.com/manuelperina-maker/grizzly-mappe/releases/download/zona-trentino/",
+  "nav": {
+   "files": [
+    {
+     "file": "nav-E10_N45.rd5",
+     "name": "E10_N45.rd5",
+     "size": 14527599
+    }
+   ],
+   "mb": 15,
+   "date": "2026-10-28 08:38",
+   "brouter": "0b3506c"
+  }
+ },
+ {
   "id": "veneto-emilia",
   "title": "Veneto ed Emilia-Romagna",
   "bbox": [
