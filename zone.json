@@ -44,6 +44,48 @@
    }
   ],
   "bundle": "grizzly-mappa-veneto-emilia.grizzly",
-  "base_url": "https://github.com/manuelperina-maker/grizzly-mappe/releases/download/zona-veneto-emilia/"
+  "base_url": "https://github.com/manuelperina-maker/grizzly-mappe/releases/download/zona-veneto-emilia/",
+  "nav": {
+   "files": [
+    {
+     "file": "nav-E10_N40.rd5",
+     "name": "E10_N40.rd5",
+     "size": 12307636
+    },
+    {
+     "file": "nav-E10_N45.rd5",
+     "name": "E10_N45.rd5",
+     "size": 15711785
+    },
+    {
+     "file": "nav-E15_N35.rd5",
+     "name": "E15_N35.rd5",
+     "size": 4811
+    },
+    {
+     "file": "nav-E15_N40.rd5",
+     "name": "E15_N40.rd5",
+     "size": 8745
+    },
+    {
+     "file": "nav-E20_N35.rd5",
+     "name": "E20_N35.rd5",
+     "size": 13380
+    },
+    {
+     "file": "nav-E5_N40.rd5",
+     "name": "E5_N40.rd5",
+     "size": 1897053
+    },
+    {
+     "file": "nav-E5_N45.rd5",
+     "name": "E5_N45.rd5",
+     "size": 260616
+    }
+   ],
+   "mb": 30,
+   "date": "2026-10-28 07:19",
+   "brouter": "0b3506c"
+  }
  }
 ]
