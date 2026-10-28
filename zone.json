@@ -9,31 +9,31 @@
    46.655
   ],
   "chunk": 4194304,
-  "mb": 345,
+  "mb": 424,
   "date": "2026-10-28",
   "parts": [
    {
     "key": "base",
     "file": "base.pmtiles",
-    "size": 177815299,
+    "size": 177835112,
     "n": 43
    },
    {
     "key": "dem",
     "file": "dem.pmtiles",
-    "size": 32354374,
-    "n": 8
+    "size": 55388732,
+    "n": 14
    },
    {
     "key": "contours",
     "file": "curve.pmtiles",
-    "size": 70506231,
-    "n": 17
+    "size": 126262048,
+    "n": 31
    },
    {
     "key": "offroad",
     "file": "offroad.pmtiles",
-    "size": 60116236,
+    "size": 59814653,
     "n": 15
    },
    {
@@ -69,7 +69,7 @@
     }
    ],
    "mb": 30,
-   "date": "2026-10-28 08:43",
+   "date": "2026-10-28 11:46",
    "brouter": "0b3506c"
   }
  },
