@@ -50,41 +50,26 @@
     {
      "file": "nav-E10_N40.rd5",
      "name": "E10_N40.rd5",
-     "size": 12307636
+     "size": 14274600
     },
     {
      "file": "nav-E10_N45.rd5",
      "name": "E10_N45.rd5",
-     "size": 15711785
-    },
-    {
-     "file": "nav-E15_N35.rd5",
-     "name": "E15_N35.rd5",
-     "size": 4811
-    },
-    {
-     "file": "nav-E15_N40.rd5",
-     "name": "E15_N40.rd5",
-     "size": 8745
-    },
-    {
-     "file": "nav-E20_N35.rd5",
-     "name": "E20_N35.rd5",
-     "size": 13380
+     "size": 18177344
     },
     {
      "file": "nav-E5_N40.rd5",
      "name": "E5_N40.rd5",
-     "size": 1897053
+     "size": 2309651
     },
     {
      "file": "nav-E5_N45.rd5",
      "name": "E5_N45.rd5",
-     "size": 260616
+     "size": 287980
     }
    ],
-   "mb": 30,
-   "date": "2026-10-28 07:19",
+   "mb": 35,
+   "date": "2026-10-28 07:32",
    "brouter": "0b3506c"
   }
  }
