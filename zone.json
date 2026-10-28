@@ -1,5 +1,79 @@
 [
  {
+  "id": "lombardia",
+  "title": "Lombardia",
+  "bbox": [
+   8.48,
+   44.6601,
+   11.4474,
+   46.655
+  ],
+  "chunk": 4194304,
+  "mb": 345,
+  "date": "2026-10-28",
+  "parts": [
+   {
+    "key": "base",
+    "file": "base.pmtiles",
+    "size": 177815299,
+    "n": 43
+   },
+   {
+    "key": "dem",
+    "file": "dem.pmtiles",
+    "size": 32354374,
+    "n": 8
+   },
+   {
+    "key": "contours",
+    "file": "curve.pmtiles",
+    "size": 70506231,
+    "n": 17
+   },
+   {
+    "key": "offroad",
+    "file": "offroad.pmtiles",
+    "size": 60116236,
+    "n": 15
+   },
+   {
+    "key": "poi",
+    "file": "poi.json",
+    "size": 4356193,
+    "n": 1
+   }
+  ],
+  "bundle": "grizzly-mappa-lombardia.grizzly",
+  "base_url": "https://github.com/manuelperina-maker/grizzly-mappe/releases/download/zona-lombardia/",
+  "nav": {
+   "files": [
+    {
+     "file": "nav-E10_N40.rd5",
+     "name": "E10_N40.rd5",
+     "size": 230178
+    },
+    {
+     "file": "nav-E10_N45.rd5",
+     "name": "E10_N45.rd5",
+     "size": 7605379
+    },
+    {
+     "file": "nav-E5_N40.rd5",
+     "name": "E5_N40.rd5",
+     "size": 1231339
+    },
+    {
+     "file": "nav-E5_N45.rd5",
+     "name": "E5_N45.rd5",
+     "size": 20634481
+    }
+   ],
+   "mb": 30,
+   "date": "2026-10-28 08:43",
+   "brouter": "0b3506c"
+  }
+ },
+ {
   "id": "trentino",
   "title": "Trentino-Alto Adige",
   "bbox": [
