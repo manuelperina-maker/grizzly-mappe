@@ -142,13 +142,13 @@
    46.6998
   ],
   "chunk": 4194304,
-  "mb": 598,
-  "date": "2026-10-28",
+  "mb": 599,
+  "date": "2026-10-30",
   "parts": [
    {
     "key": "base",
     "file": "base.pmtiles",
-    "size": 266270979,
+    "size": 266287199,
     "n": 64
    },
    {
@@ -166,13 +166,13 @@
    {
     "key": "offroad",
     "file": "offroad.pmtiles",
-    "size": 69806582,
+    "size": 69820395,
     "n": 17
    },
    {
     "key": "poi",
     "file": "poi.json",
-    "size": 4474090,
+    "size": 4532592,
     "n": 1
    }
   ],
@@ -183,17 +183,17 @@
     {
      "file": "nav-E10_N40.rd5",
      "name": "E10_N40.rd5",
-     "size": 14274600
+     "size": 14275752
     },
     {
      "file": "nav-E10_N45.rd5",
      "name": "E10_N45.rd5",
-     "size": 18177344
+     "size": 18181915
     },
     {
      "file": "nav-E5_N40.rd5",
      "name": "E5_N40.rd5",
-     "size": 2309651
+     "size": 2309687
     },
     {
      "file": "nav-E5_N45.rd5",
@@ -202,7 +202,7 @@
     }
    ],
    "mb": 35,
-   "date": "2026-10-28 11:46",
+   "date": "2026-10-30 07:46",
    "brouter": "0b3506c"
   }
  }
