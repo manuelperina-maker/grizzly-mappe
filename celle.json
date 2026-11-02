@@ -104,6 +104,63 @@
   }
  },
  {
+  "id": "q41_14",
+  "title": "Quadrato 41°N 14°E",
+  "bbox": [
+   14.0,
+   41.0,
+   15.0,
+   42.0
+  ],
+  "chunk": 4194304,
+  "mb": 62,
+  "date": "2026-11-02",
+  "parts": [
+   {
+    "key": "base",
+    "file": "base.pmtiles",
+    "size": 36242807,
+    "n": 9
+   },
+   {
+    "key": "dem",
+    "file": "dem.pmtiles",
+    "size": 15885749,
+    "n": 4
+   },
+   {
+    "key": "offroad",
+    "file": "offroad.pmtiles",
+    "size": 8866173,
+    "n": 3
+   },
+   {
+    "key": "poi",
+    "file": "poi.json",
+    "size": 654891,
+    "n": 1
+   }
+  ],
+  "base_url": "https://github.com/manuelperina-maker/grizzly-mappe/releases/download/cella-q41_14/",
+  "nav": {
+   "files": [
+    {
+     "file": "nav-E10_N40.rd5",
+     "name": "E10_N40.rd5",
+     "size": 10809098
+    },
+    {
+     "file": "nav-E15_N40.rd5",
+     "name": "E15_N40.rd5",
+     "size": 1010058
+    }
+   ],
+   "mb": 12,
+   "date": "2026-11-02 14:15",
+   "brouter": "0b3506c"
+  }
+ },
+ {
   "id": "q41_15",
   "title": "Quadrato 41°N 15°E",
   "bbox": [
