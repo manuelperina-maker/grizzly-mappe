@@ -1,5 +1,62 @@
 [
  {
+  "id": "q43_10",
+  "title": "Quadrato 43°N 10°E",
+  "bbox": [
+   10.0,
+   43.0,
+   11.0,
+   44.0
+  ],
+  "chunk": 4194304,
+  "mb": 54,
+  "date": "2026-11-02",
+  "parts": [
+   {
+    "key": "base",
+    "file": "base.pmtiles",
+    "size": 29400677,
+    "n": 8
+   },
+   {
+    "key": "dem",
+    "file": "dem.pmtiles",
+    "size": 11112719,
+    "n": 3
+   },
+   {
+    "key": "offroad",
+    "file": "offroad.pmtiles",
+    "size": 12128658,
+    "n": 3
+   },
+   {
+    "key": "poi",
+    "file": "poi.json",
+    "size": 1266273,
+    "n": 1
+   }
+  ],
+  "base_url": "https://github.com/manuelperina-maker/grizzly-mappe/releases/download/cella-q43_10/",
+  "nav": {
+   "files": [
+    {
+     "file": "nav-E10_N40.rd5",
+     "name": "E10_N40.rd5",
+     "size": 12466899
+    },
+    {
+     "file": "nav-E5_N40.rd5",
+     "name": "E5_N40.rd5",
+     "size": 817405
+    }
+   ],
+   "mb": 13,
+   "date": "2026-11-02 12:56",
+   "brouter": "0b3506c"
+  }
+ },
+ {
   "id": "q43_11",
   "title": "Quadrato 43°N 11°E",
   "bbox": [
