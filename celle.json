@@ -1229,13 +1229,13 @@
    {
     "key": "offroad",
     "file": "offroad.pmtiles",
-    "size": 160682,
+    "size": 222943,
     "n": 1
    },
    {
     "key": "poi",
     "file": "poi.json",
-    "size": 14644,
+    "size": 25862,
     "n": 1
    }
   ],
@@ -1245,11 +1245,11 @@
     {
      "file": "nav-E10_N35.rd5",
      "name": "E10_N35.rd5",
-     "size": 158649
+     "size": 660142
     }
    ],
-   "mb": 0,
-   "date": "2026-11-03 09:19",
+   "mb": 1,
+   "date": "2026-11-03 13:43",
    "brouter": "0b3506c"
   }
  },
