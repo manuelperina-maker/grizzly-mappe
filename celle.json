@@ -1078,6 +1078,73 @@
   }
  },
  {
+  "id": "q35_9",
+  "title": "Quadrato 35°N 9°E",
+  "bbox": [
+   9.0,
+   35.0,
+   10.0,
+   36.0
+  ],
+  "chunk": 4194304,
+  "mb": 9,
+  "date": "2026-11-03",
+  "parts": [
+   {
+    "key": "base",
+    "file": "base.pmtiles",
+    "size": 5628863,
+    "n": 2
+   },
+   {
+    "key": "dem",
+    "file": "dem.pmtiles",
+    "size": 2046645,
+    "n": 1
+   },
+   {
+    "key": "offroad",
+    "file": "offroad.pmtiles",
+    "size": 1248822,
+    "n": 1
+   },
+   {
+    "key": "poi",
+    "file": "poi.json",
+    "size": 60071,
+    "n": 1
+   }
+  ],
+  "base_url": "https://github.com/manuelperina-maker/grizzly-mappe/releases/download/cella-q35_9/",
+  "nav": {
+   "files": [
+    {
+     "file": "nav-E10_N30.rd5",
+     "name": "E10_N30.rd5",
+     "size": 92858
+    },
+    {
+     "file": "nav-E10_N35.rd5",
+     "name": "E10_N35.rd5",
+     "size": 652282
+    },
+    {
+     "file": "nav-E5_N30.rd5",
+     "name": "E5_N30.rd5",
+     "size": 551192
+    },
+    {
+     "file": "nav-E5_N35.rd5",
+     "name": "E5_N35.rd5",
+     "size": 2514664
+    }
+   ],
+   "mb": 4,
+   "date": "2026-11-03 13:25",
+   "brouter": "0b3506c"
+  }
+ },
+ {
   "id": "q36_10",
   "title": "Quadrato 36°N 10°E",
   "bbox": [
