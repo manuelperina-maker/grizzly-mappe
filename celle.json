@@ -1,5 +1,62 @@
 [
  {
+  "id": "q32_10",
+  "title": "Quadrato 32°N 10°E",
+  "bbox": [
+   10.0,
+   32.0,
+   11.0,
+   33.0
+  ],
+  "chunk": 4194304,
+  "mb": 5,
+  "date": "2026-11-03",
+  "parts": [
+   {
+    "key": "base",
+    "file": "base.pmtiles",
+    "size": 1871672,
+    "n": 1
+   },
+   {
+    "key": "dem",
+    "file": "dem.pmtiles",
+    "size": 2162892,
+    "n": 1
+   },
+   {
+    "key": "offroad",
+    "file": "offroad.pmtiles",
+    "size": 1231865,
+    "n": 1
+   },
+   {
+    "key": "poi",
+    "file": "poi.json",
+    "size": 51777,
+    "n": 1
+   }
+  ],
+  "base_url": "https://github.com/manuelperina-maker/grizzly-mappe/releases/download/cella-q32_10/",
+  "nav": {
+   "files": [
+    {
+     "file": "nav-E10_N30.rd5",
+     "name": "E10_N30.rd5",
+     "size": 977903
+    },
+    {
+     "file": "nav-E5_N30.rd5",
+     "name": "E5_N30.rd5",
+     "size": 91552
+    }
+   ],
+   "mb": 1,
+   "date": "2026-11-03 13:09",
+   "brouter": "0b3506c"
+  }
+ },
+ {
   "id": "q33_9",
   "title": "Quadrato 33°N 9°E",
   "bbox": [
