@@ -104,6 +104,58 @@
   }
  },
  {
+  "id": "q38_13",
+  "title": "Quadrato 38°N 13°E",
+  "bbox": [
+   13.0,
+   38.0,
+   14.0,
+   39.0
+  ],
+  "chunk": 4194304,
+  "mb": 9,
+  "date": "2026-11-03",
+  "parts": [
+   {
+    "key": "base",
+    "file": "base.pmtiles",
+    "size": 4137761,
+    "n": 1
+   },
+   {
+    "key": "dem",
+    "file": "dem.pmtiles",
+    "size": 3216952,
+    "n": 1
+   },
+   {
+    "key": "offroad",
+    "file": "offroad.pmtiles",
+    "size": 1050245,
+    "n": 1
+   },
+   {
+    "key": "poi",
+    "file": "poi.json",
+    "size": 238713,
+    "n": 1
+   }
+  ],
+  "base_url": "https://github.com/manuelperina-maker/grizzly-mappe/releases/download/cella-q38_13/",
+  "nav": {
+   "files": [
+    {
+     "file": "nav-E10_N35.rd5",
+     "name": "E10_N35.rd5",
+     "size": 2949141
+    }
+   ],
+   "mb": 3,
+   "date": "2026-11-03 08:57",
+   "brouter": "0b3506c"
+  }
+ },
+ {
   "id": "q38_14",
   "title": "Quadrato 38°N 14°E",
   "bbox": [
