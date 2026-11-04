@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Giro Grizzly</title>
+<meta name="description" content="Un giro condiviso con Grizzly, il navigatore per il fuoristrada">
+<meta name="theme-color" content="#14181C">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.css">
+<script src="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>
+<style>
+  :root { --bg: #14181C; --card: #1E242A; --tx: #F2F2F0; --mut: #A7B0B8; --acc: #F2A007; --line: #FF5A1F; }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--tx); font: 15px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  #map { position: absolute; inset: 0; }
+  .card { position: absolute; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); max-width: 520px; margin: 0 auto;
+    background: var(--card); border-radius: 16px; padding: 14px 16px; box-shadow: 0 8px 30px rgba(0,0,0,.45); }
+  .brand { display: flex; align-items: center; gap: 8px; color: var(--acc); font-weight: 800; letter-spacing: .12em; font-size: 12px; text-transform: uppercase; }
+  .brand i { width: 22px; height: 22px; border-radius: 50%; background: var(--acc); display: inline-block; }
+  h1 { margin: 6px 0 2px; font-size: 20px; line-height: 1.25; overflow-wrap: anywhere; }
+  .meta { color: var(--mut); font-size: 14px; }
+  .btns { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+  .btns a, .btns button { flex: 1 1 140px; border: 0; border-radius: 12px; padding: 12px; font: inherit; font-weight: 700; text-align: center; text-decoration: none; cursor: pointer; }
+  .pri { background: var(--acc); color: #111; }
+  .sec { background: #2B333B; color: var(--tx); }
+  .note { margin-top: 10px; color: var(--mut); font-size: 12.5px; }
+  .err { position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; text-align: center; }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div class="card" id="card" hidden>
+  <div class="brand"><i></i>Grizzly · giro condiviso</div>
+  <h1 id="name"></h1>
+  <div class="meta" id="meta"></div>
+  <div class="btns">
+    <button type="button" class="pri" id="gpx">Scarica il GPX</button>
+    <a class="sec" id="gmaps" target="_blank" rel="noopener">Partenza su Google Maps</a>
+  </div>
+  <div class="note">Con Grizzly apri il GPX e lo navighi anche senza internet. Divieti e chiusure vanno sempre verificati sul posto.</div>
+</div>
+<div class="err" id="err" hidden><div><b>Link non valido</b><br><span class="meta">Chiedi a chi te l'ha mandato di condividerlo di nuovo da Grizzly.</span></div></div>
+<script>
+// Il giro viaggia tutto nel link (dopo il #): nessun server lo riceve o lo conserva.
+// #v=1&n=<nome>&m=<mezzo>&p=<linea codificata, precisione 5>
+(function () {
+  const q = new URLSearchParams(location.hash.slice(1));
+  function decode(s) {
+    const out = []; let i = 0, lat = 0, lon = 0;
+    while (i < s.length) {
+      for (const k of [0, 1]) {
+        let b, sh = 0, r = 0;
+        do { b = s.charCodeAt(i++) - 63; r |= (b & 31) << sh; sh += 5; } while (b >= 32 && i <= s.length);
+        const d = r & 1 ? ~(r >> 1) : r >> 1;
+        if (k === 0) lat += d; else lon += d;
+      }
+      out.push([lon / 1e5, lat / 1e5]);
+    }
+    return out;
+  }
+  let pts = [];
+  try { pts = decode(q.get("p") || ""); } catch (e) { pts = []; }
+  pts = pts.filter((c) => Math.abs(c[0]) <= 180 && Math.abs(c[1]) <= 90);
+  if (pts.length < 2) { document.getElementById("err").hidden = false; return; }
+  const name = (q.get("n") || "Giro Grizzly").slice(0, 80), mezzo = (q.get("m") || "").slice(0, 30);
+  const R = Math.PI / 180, dist = (a, b) => { const x = (b[0] - a[0]) * Math.cos(((a[1] + b[1]) / 2) * R), y = b[1] - a[1]; return Math.sqrt(x * x + y * y) * 111195; };
+  let len = 0; for (let i = 1; i < pts.length; i++) len += dist(pts[i - 1], pts[i]);
+  const loop = dist(pts[0], pts[pts.length - 1]) < 300;
+  document.title = name + " · Grizzly";
+  document.getElementById("name").textContent = name;
+  document.getElementById("meta").textContent = (len >= 10000 ? Math.round(len / 1000) : (len / 1000).toFixed(1).replace(".", ",")) + " km" + (loop ? " · ad anello" : "") + (mezzo ? " · " + mezzo : "");
+  document.getElementById("card").hidden = false;
+  const s = pts[0];
+  document.getElementById("gmaps").href = `https://www.google.com/maps/dir/?api=1&destination=${s[1].toFixed(5)},${s[0].toFixed(5)}`;
+  document.getElementById("gpx").onclick = () => {
+    const esc = (t) => t.replace(/[<>&"]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", '"': "&quot;" }[c]));
+    const gpx = `<?xml version="1.0" encoding="UTF-8"?>\n<gpx version="1.1" creator="Grizzly" xmlns="http://www.topografix.com/GPX/1/1">\n<trk><name>${esc(name)}</name><trkseg>\n` +
+      pts.map((c) => `<trkpt lat="${c[1].toFixed(5)}" lon="${c[0].toFixed(5)}"/>`).join("\n") + `\n</trkseg></trk>\n</gpx>\n`;
+    const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([gpx], { type: "application/gpx+xml" }));
+    a.download = (name.replace(/[^\w\-àèéìòù ]+/gi, "").trim().replace(/\s+/g, "-") || "giro") + ".gpx"; document.body.appendChild(a); a.click(); a.remove();
+  };
+  if (!window.maplibregl) return;
+  const map = new maplibregl.Map({ container: "map", style: "https://tiles.openfreemap.org/styles/liberty", attributionControl: { compact: true } });
+  const bb = pts.reduce((b, c) => b.extend(c), new maplibregl.LngLatBounds(pts[0], pts[0]));
+  const pad = () => ({ top: 40, left: 30, right: 30, bottom: (document.getElementById("card").offsetHeight || 160) + 40 });
+  map.fitBounds(bb, { padding: pad(), duration: 0, maxZoom: 15 });
+  map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
+  map.on("load", () => {
+    map.addSource("giro", { type: "geojson", data: { type: "Feature", geometry: { type: "LineString", coordinates: pts } } });
+    map.addLayer({ id: "giro-c", type: "line", source: "giro", layout: { "line-cap": "round", "line-join": "round" }, paint: { "line-color": "#fff", "line-width": 8 } });
+    map.addLayer({ id: "giro", type: "line", source: "giro", layout: { "line-cap": "round", "line-join": "round" }, paint: { "line-color": "#FF5A1F", "line-width": 4.5 } });
+    const dot = (c, col, t) => { const el = document.createElement("div"); el.style.cssText = `width:18px;height:18px;border-radius:50%;background:${col};border:3px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.5)`; el.title = t; new maplibregl.Marker({ element: el }).setLngLat(c).addTo(map); };
+    if (!loop) dot(pts[pts.length - 1], "#D93A2B", "Arrivo");
+    dot(pts[0], "#22B24C", loop ? "Partenza e arrivo" : "Partenza");
+  });
+})();
+</script>
+</body>
+</html>
