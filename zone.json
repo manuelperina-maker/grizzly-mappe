@@ -44,26 +44,26 @@
     {
      "file": "nav-E10_N40.rd5",
      "name": "E10_N40.rd5",
-     "size": 230178
+     "size": 231443
     },
     {
      "file": "nav-E10_N45.rd5",
      "name": "E10_N45.rd5",
-     "size": 7607662
+     "size": 7665883
     },
     {
      "file": "nav-E5_N40.rd5",
      "name": "E5_N40.rd5",
-     "size": 1231339
+     "size": 1234917
     },
     {
      "file": "nav-E5_N45.rd5",
      "name": "E5_N45.rd5",
-     "size": 20637895
+     "size": 20721804
     }
    ],
    "mb": 30,
-   "date": "2026-10-30 17:27",
+   "date": "2026-11-04 23:33",
    "brouter": "0b3506c"
   }
  },
